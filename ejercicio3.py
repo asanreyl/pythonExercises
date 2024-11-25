@@ -1,4 +1,5 @@
 precio_pro=float(input('Precio del producto en euros: '))
+precio_pro=round(precio_pro,2)
 bille_mone=(500,200,100,50,20,10,5,1,0.50,0.20,0.10,0.05,0.02,0.01)
 resultado={}
 
@@ -6,7 +7,8 @@ for i in bille_mone:
     contador_bille=0
     while precio_pro >= i:
         contador_bille += 1
-        precio_pro= precio_pro-i
+        precio_pro= round (precio_pro-i,2)
+        print(precio_pro)
     resultado[i]=contador_bille
  
 for a in resultado:
